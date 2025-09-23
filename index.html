@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasim Graphix | Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Poppins', 'sans-serif'],
+              montserrat: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                green: '#4ade80',
+                'green-dark': '#22c55e',
+              },
+              dark: {
+                bg: '#111827',
+                'bg-secondary': '#1F2937',
+                text: '#F9FAFB',
+                'text-secondary': '#9CA3B0',
+              },
+              light: {
+                bg: '#ffffff',
+                'bg-secondary': '#F9FAFB',
+                text: '#1F2937',
+                'text-secondary': '#4B5563',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+              'blink-caret': 'blink-caret 1s step-end infinite',
+              'fade-in': 'fade-in 0.3s ease-out forwards',
+              'scale-in': 'scale-in 0.3s ease-out forwards',
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'blink-caret': {
+                'from, to': { 'border-color': 'transparent' },
+                '50%': { 'border-color': '#4ade80' },
+              },
+              'fade-in': {
+                'from': { opacity: '0' },
+                'to': { opacity: '1' },
+              },
+              'scale-in': {
+                'from': { transform: 'scale(0.95)', opacity: '0' },
+                'to': { transform: 'scale(1)', opacity: '1' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.544.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

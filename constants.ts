@@ -1,0 +1,53 @@
+import React from 'react';
+import { PortfolioProject, PortfolioCategory, Skill, Service, SocialLink } from './types';
+import {
+    Shirt, Palette, Type, PenTool, Printer, Briefcase, Wand2, Sparkles, Megaphone, LayoutGrid,
+    Github, Linkedin, Twitter, Youtube, Facebook
+} from 'lucide-react';
+
+export const NAV_LINKS = [
+  { name: 'Home', href: '#home' },
+  { name: 'About', href: '#about' },
+  { name: 'Services', href: '#services' },
+  { name: 'Portfolio', href: '#portfolio' },
+  { name: 'Contact', href: '#contact' },
+];
+
+export const SKILLS: Skill[] = [
+  { name: 'T-Shirt Design', description: 'Bold, trendy, and print-ready designs that sell.', Icon: Shirt },
+  { name: 'Logo & Branding', description: 'Unique and memorable logos that define your brand.', Icon: Palette },
+  { name: 'Typography & Layout', description: 'Expertly crafted text and structure for visual appeal.', Icon: Type },
+  { name: 'Vector Illustration', description: 'Scalable and clean illustrations for any medium.', Icon: PenTool },
+  { name: 'Print-Ready Graphics', description: 'Flawless files optimized for professional printing.', Icon: Printer },
+  { name: 'Brand Identity Systems', description: 'Comprehensive visual systems for a cohesive brand.', Icon: Briefcase },
+];
+
+export const SERVICES: Service[] = [
+  { title: 'Custom T-Shirt Design', description: 'Unique apparel graphics for your brand or event.', Icon: Shirt },
+  { title: 'Logo Design & Redesign', description: 'Crafting memorable logos from scratch or refreshing existing ones.', Icon: Wand2 },
+  { title: 'Brand Identity Packages', description: 'A complete suite of assets for a cohesive brand presence.', Icon: Briefcase },
+  { title: 'Merchandise Graphics', description: 'Eye-catching designs for all your promotional products.', Icon: Sparkles },
+  { title: 'Vector Illustration', description: 'Custom illustrations for web, print, and more.', Icon: PenTool },
+  { title: 'Social Media Graphics', description: 'Engaging visuals optimized for your social channels.', Icon: Megaphone },
+  { title: 'Print-Ready Design Files', description: 'Business cards, posters, flyers, and stationery.', Icon: Printer },
+  { title: 'Posters & Flyers', description: 'Promotional materials that grab attention and inform.', Icon: LayoutGrid },
+];
+
+export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
+  { id: 1, title: 'Anime T-shirt Collection', description: 'A collection of urban-style tees.', detailedDescription: 'The goal was to create a full collection of anime-inspired T-shirt designs for an urban streetwear brand. The design approach focused on dynamic character illustrations, vibrant color palettes, and integrating Japanese typography in a modern way. The outcome was a best-selling collection that significantly boosted the brand\'s online presence.', category: PortfolioCategory.APPAREL, imageUrls: ['https://i.postimg.cc/R0q24xpz/Anime-TD-1-M-PX.jpg', 'https://i.postimg.cc/PJ8yJmXp/Panda-TD-1s-M-P.jpg', 'https://i.postimg.cc/Dw3jWYb2/Son-TD-1s-M-P.jpg', 'https://i.postimg.cc/N0MzY2HT/Naruto-TD-1s-MP.jpg', 'https://i.postimg.cc/gcv4CHTQ/Horse-TD-1s-M-P.jpg', 'https://i.postimg.cc/BQm53YcY/Gojo-TD-1s-M-P.jpg', 'https://i.postimg.cc/xdzLK0rh/Fight-TD-1s-M-P.jpg'], tools: ['Adobe Illustrator', 'Adobe Photoshop'], client: 'Urban Otaku Wear', date: 'Fall 2023', projectType: 'Merchandise Collection' },
+  { id: 2, title: 'Adventure T-Shirt Design', description: 'Outdoor-themed apparel design.', detailedDescription: 'Designed for an outdoor adventure brand, this T-shirt captures the spirit of exploration. It features a custom vector illustration of a mountain landscape with intricate details. The design uses a limited color palette for a vintage, screen-printed feel, making it perfect for hikers, campers, and nature lovers.', category: PortfolioCategory.APPAREL, imageUrls: ['https://i.postimg.cc/3xKJYWH0/Outdor-TD-1-M-P-1-5x.jpg', 'https://i.postimg.cc/DzXY8kxy/Hunting-TD-2s-Mp-1-5x.jpg', 'https://i.postimg.cc/ncWk7Sjs/Hunting-TD-1sm-P-1-5x.jpg', 'https://i.postimg.cc/PJ9wLc3T/Hiking-TD-3sp-M-1-5x.jpg', 'https://i.postimg.cc/ZYM3DBT2/Hiking-TD-2spm-1-5x.jpg', 'https://i.postimg.cc/XYM54RBg/Hiking-TD-1-Ms-P-1-5x.jpg', 'https://i.postimg.cc/vZWVB0Ww/Bigfoot-TD-s-1-PM-1-5x.jpg'], tools: ['Adobe Illustrator', 'CorelDRAW'], client: 'Peak Outfitters', date: 'Summer 2023', projectType: 'Apparel Design' },
+  { id: 3, title: 'Halloween T-Shirt Collection', description: 'Spooky and fun Halloween merch.', detailedDescription: 'A collection of T-shirts created for the Halloween season. The designs range from cute and spooky characters for a family-friendly audience to more intricate and horror-themed illustrations. This project included creating mockups for online store listings and social media promotion.', category: PortfolioCategory.APPAREL, imageUrls: ['https://i.postimg.cc/d3vj4GzV/Horror-TD-C-M-P-1x.jpg', 'https://i.postimg.cc/FFBnvVbx/Horror-TD-6-s-M-P.jpg', 'https://i.postimg.cc/xT7CLhvb/Horror-TD-5s-M-P.jpg', 'https://i.postimg.cc/9fPQ5fvG/Horror-TD-4s-M-P.jpg', 'https://i.postimg.cc/J0F1cHkW/Horror-TD-3s-M-P.jpg', 'https://i.postimg.cc/prmvTV1c/Horror-TD-2s-M-P.jpg', 'https://i.postimg.cc/28BmN6WV/Horror-TD-1-s-M-P.jpg'], tools: ['Adobe Illustrator', 'Adobe Photoshop'], client: 'Spooky Tees Inc.', date: 'October 2022', projectType: 'Seasonal Collection' },
+  { id: 4, title: 'Sports Team Logo & Apparel', description: 'Rebranding for a local sports team.', detailedDescription: 'This project was a complete rebranding for a local basketball team. It involved designing a new, modern mascot logo and creating a full set of apparel including jerseys, warm-up shirts, and fan merchandise. The goal was to create a fierce and professional look that would instill pride in the players and fans.', category: PortfolioCategory.LOGOS, imageUrls: ['https://i.postimg.cc/4xXjm9yZ/BASKETBALL-TD-P-1-XC.jpg', 'https://i.postimg.cc/nLMfThnF/Untitled-1-Recovered-1-25x-7-M.jpg', 'https://i.postimg.cc/x1xWkVMW/Untitled-1-Recovered-1-25x-6-M.jpg', 'https://i.postimg.cc/BvRkg5hp/Untitled-1-1-25x-5-M.jpg', 'https://i.postimg.cc/xCrpHfCF/Untitled-1-1-25x-4x.jpg', 'https://i.postimg.cc/FzpT20x2/Untitled-1-1-25x-3x.jpg', 'https://i.postimg.cc/nL9wCjHD/Untitled-1-1-25x-2-M.jpg', 'https://i.postimg.cc/tRNvZHH2/Untitled-1-1-25x-1-M.jpg'], tools: ['Adobe Illustrator'], client: 'The Ravens', date: 'January 2023', projectType: 'Brand Identity & Apparel' },
+  { id: 5, title: 'Streetware T-Shirt Design', description: 'Print-on-demand designs for an online store.', detailedDescription: 'Developed a series of bold, graphic-heavy designs for a streetwear brand focused on the print-on-demand market. The artwork features a mix of typography, abstract shapes, and cultural references, designed to be eye-catching and trendy. All files were prepared in multiple colorways to offer variety to customers.', category: PortfolioCategory.APPAREL, imageUrls: ['https://i.postimg.cc/Qxm0YnNG/C-S-B-TD-1-M-P-C.jpg', 'https://i.postimg.cc/pTFTGZPL/Skate-TD-s1-M-P.jpg', 'https://i.postimg.cc/NGRFRpNN/Car-TD-1s-M-P.jpg', 'https://i.postimg.cc/Ghr2KGVb/Bike-Td-1s-M-P.jpg'], tools: ['Adobe Illustrator', 'Adobe Photoshop'], client: 'Print Syndicate', date: 'Ongoing', projectType: 'POD Graphics' },
+  { id: 6, title: 'USA Freedom T-Shirt Collection', description: 'Patriotic apparel collection.', detailedDescription: 'A collection of T-shirts with a patriotic American theme. These designs blend iconic symbols like the flag and bald eagle with modern design aesthetics, including grunge textures and contemporary typography. The collection was designed to appeal to a broad audience for national holidays and events.', category: PortfolioCategory.APPAREL, imageUrls: ['https://i.postimg.cc/MGgSMpgD/MOCKUP-TD-P-1vx-M-1-25x.jpg', 'https://picsum.photos/seed/project6-2/800/600'], tools: ['Adobe Illustrator', 'Adobe Photoshop'], client: 'Liberty Threads', date: 'May 2023', projectType: 'Holiday Collection' },
+  { id: 7, title: 'Custom Fishing T-Shirt', description: 'Clean and simple designs for a clothing brand.', detailedDescription: 'This custom T-shirt was designed for a fishing enthusiast brand. The illustration of the fish is highly detailed, created as a vector graphic for scalability. The design focuses on a clean and classic look that can be worn both on and off the water.', category: PortfolioCategory.APPAREL, imageUrls: ['https://i.postimg.cc/52MnsYFG/Fishing-TD-1-PX.jpg', 'https://picsum.photos/seed/project7-2/800/600', 'https://picsum.photos/seed/project7-3/800/600'], tools: ['Adobe Illustrator'], client: 'Reel Style Co.', date: 'April 2022', projectType: 'Apparel Design' },
+  { id: 8, title: 'Fishing T-Shirt Design', description: 'A comprehensive style guide for a corporate client.', detailedDescription: 'Another piece for a fishing apparel company, this design uses a more stylized and graphic approach. It combines a silhouette of a fisherman with bold, impactful text. This design was part of a larger collection aimed at creating a cohesive brand identity for the client.', category: PortfolioCategory.BRANDING, imageUrls: ['https://i.postimg.cc/W16FwQsg/Fishing-TD-2-M-P-C.jpg', 'https://i.postimg.cc/W42kC0xm/Fish-M-P-9-M.jpg', 'https://i.postimg.cc/mkGz3M3F/Fish-M-P-10.jpg', 'https://i.postimg.cc/FFjJrWmb/Fish-M-P-11.jpg', 'https://i.postimg.cc/sDj1V3Ty/Fish-M-P-12.jpg', 'https://i.postimg.cc/26N8gY1s/Fish-M-P-13.jpg'], tools: ['Adobe Illustrator', 'CorelDRAW'], client: 'Angler\'s Edge', date: 'March 2023', projectType: 'Brand Identity' },
+];
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  { name: 'GitHub', url: '#', Icon: Github },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/nasimadx?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', Icon: Linkedin },
+  { name: 'Twitter', url: 'https://x.com/NasimGTX?t=NZ4vLsVbyUAIQMBWtESxmA&s=09', Icon: Twitter },
+  { name: 'YouTube', url: '#', Icon: Youtube },
+  { name: 'Facebook', url: 'https://www.facebook.com/md.nasim.813991', Icon: Facebook },
+];
