@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        allowedHosts: true,
+        hmr: { host: 'localhost' },
+        headers: { 'X-Frame-Options': 'ALLOWALL' },
       },
       plugins: [react()],
       define: {

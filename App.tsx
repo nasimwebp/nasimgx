@@ -4,11 +4,13 @@ import Footer from './components/Footer';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import HomePage from './pages/HomePage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import BookCoverPage from './pages/BookCoverPage';
 import { PORTFOLIO_PROJECTS } from './constants';
 
 type View = 
   | { type: 'home' }
-  | { type: 'project', projectId: number };
+  | { type: 'project', projectId: number }
+  | { type: 'bookcover' };
 
 const App: React.FC = () => {
   const [view, setView] = useState<View>({ type: 'home' });
@@ -59,11 +61,19 @@ const App: React.FC = () => {
   };
 
   const handleSelectProject = (projectId: number) => {
+    if (projectId === 0) {
+      setView({ type: 'bookcover' });
+      window.scrollTo(0, 0);
+      return;
+    }
     setView({ type: 'project', projectId });
     window.scrollTo(0, 0);
   };
 
   const renderContent = () => {
+    if (view.type === 'bookcover') {
+      return <BookCoverPage onBack={() => { setView({ type: 'home' }); setTimeout(() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' }), 50); }} />;
+    }
     if (view.type === 'project') {
       const project = PORTFOLIO_PROJECTS.find(p => p.id === view.projectId);
       if (!project) {
